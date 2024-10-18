@@ -34,6 +34,6 @@ terraform apply -var-file environment/test/terraform.tfvars
                 "ec2:ModifyVpcAttribute"
             ],
             "Resource": "*"
-        }
+        },
 
 ```
