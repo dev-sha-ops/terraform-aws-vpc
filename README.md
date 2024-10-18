@@ -14,3 +14,26 @@ terraform init -backend-config environment/test/backend.conf
 terraform plan -var-file environment/test/terraform.tfvars
 terraform apply -var-file environment/test/terraform.tfvars
 ```
+``` json
+{
+            "Effect": "Allow",
+            "Action": [
+                "s3:CreateBucket",
+                "s3:PutBucketAcl",
+                "s3:PutBucketPolicy",
+                "s3:PutBucketTagging"
+            ],
+            "Resource": "arn:aws:s3:::*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "ec2:CreateVpc",
+                "ec2:DescribeVpcs",
+                "ec2:DeleteVpc",
+                "ec2:ModifyVpcAttribute"
+            ],
+            "Resource": "*"
+        }
+
+```
