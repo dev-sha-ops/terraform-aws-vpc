@@ -1,6 +1,6 @@
 resource "aws_eks_node_group" "managed_node_group" {
-  cluster_name    = "${var.node_group_name}-${var.environment}"
-  node_group_name = var.node_group_name
+  cluster_name    = "${var.cluster_name}-${var.environment}"
+  node_group_name = "${var.node_group_name}-${var.environment}"
   node_role_arn   = aws_iam_role.eks_node_role.arn
   subnet_ids      = var.subnet_ids
 
