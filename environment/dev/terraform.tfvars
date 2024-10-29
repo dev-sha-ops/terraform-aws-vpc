@@ -20,9 +20,11 @@ eks = {
 }
 
 eks_managed_node_groups = {
-  cluster_name            = "eks-cluster"
-  node_group_name         = "node-group"
-  node_group_desired_size = 3
-  node_group_min_size     = 1
-  node_group_max_size     = 5
+  node-group = {
+    cluster_name            = "eks-cluster"
+    node_group_name         = "node-group"
+    node_group_desired_size = 3
+    node_group_min_size     = 1
+    node_group_max_size     = 5
+  }
 }
